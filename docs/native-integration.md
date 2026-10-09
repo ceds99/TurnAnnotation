@@ -2,7 +2,7 @@
 
 核查日期：2026-10-09。以下区分官方文档能力、当前机器观察和待验证问题；未安装插件、未升级客户端、未对真实会话执行输入实验。
 
-## 初步选择：先验证 Claude Code Mods
+## 已确认路线：先验证 Claude Code Mods
 
 官方文档提供以下组合：
 
@@ -16,6 +16,8 @@
 文档标明终端 Mods 从 v2.1.287 起正式支持，Desktop Code tab 的对应版本从 v2.1.286 起支持。CLI 和 Desktop 能显示 Mod UI，VS Code chat panel 与 headless SDK 不显示这些界面。来源：[运行环境](https://code.claude.com/docs/en/plugins/mods/overview#where-mods-run)。
 
 当前机器 `claude --version` 为 **2.1.260**。因此文档中的能力尚不能推定为本机可用；后续 spike 需固定支持版本并记录验证结果。
+
+机器上也已安装 Claude Desktop，应用版本为 **2.2553.1**（只读检查 Info.plist）。这是桌面应用版本，不能与 Claude Code 的 2.1.x 运行时版本比较。Desktop 内置运行时应以本地 Code 会话中的 `/status` 为准，目前未读取该状态。终端 CLI 与 Desktop Code tab 应分别验证，不能将一处通过的结论直接套用到另一处。
 
 ### 尚未证实的关键部分
 

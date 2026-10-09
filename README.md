@@ -31,19 +31,20 @@ TurnMargin 的目标是在原生 agent 客户端中批注回复，将本次批�
 - [架构与反馈组装契约](docs/architecture.md)
 - [原生接入调研](docs/native-integration.md)
 - [同类项目与对照](docs/related-work.md)
+- [可交付的研究与工程工作](docs/research-agenda.md)
 - [多维评测与非劣效实验](docs/evaluation.md)
 - [决策记录](docs/decisions.md)
 - [实施顺序与验收](docs/roadmap.md)
 - [反馈示例](examples/feedback.txt) / [示例输入](examples/annotation-batch.json)
 - [测评案例设计示例](evals/cases/structured-output.json)
 
-初步路线：优先验证 Claude Code Mods 的原生接入能力，选区与输入框组合体验通过实测后再承诺支持。Codex 作为后续适配目标。已有近似实现包括 Plannotator 和 Herdr Annotate，详见调研文档；本项目不声称首创该交互。
+已确认首个接入路线为 Claude Code Mods；选区与输入框组合体验通过实测后再承诺支持。Codex 作为后续适配目标。已有近似实现包括 Plannotator 和 Herdr Annotate，详见调研文档；本项目不声称首创该交互。
 
 ## 评测原则
 
 比较普通编号反馈、认真组织的短引用反馈、TurnMargin 组装反馈；固定修改意图和任务起点。分别测量请求覆盖率、实际落实率、产物正确性、回归错误、完整任务 token 和延迟。没有足够精度的置信区间时，结论必须是证据不足。
 
-推荐复用 Promptfoo 的运行和断言能力，自建少量适配、任务评分和配对非劣效统计；工具选择仍需原生行为一致性验证。
+已确认复用 Promptfoo 的运行和断言能力，自建少量适配、任务评分和配对非劣效统计；实际适配仍需原生行为一致性验证。
 
 ## 开源
 
