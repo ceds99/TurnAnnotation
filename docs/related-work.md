@@ -2,13 +2,13 @@
 
 核查日期：2026-10-09。基于各项目自己的文档，尚未本地安装或做功能评测。未检索到某项证据不等于该项目没有该能力。
 
-| 项目 | 已公开描述的相关能力 | 与 TurnMargin 的关系 |
+| 项目 | 已公开描述的相关能力 | 与 TurnAnnotation 的关系 |
 | --- | --- | --- |
 | [Plannotator](https://github.com/backnotprop/plannotator) | 本地浏览器评审界面，批注计划、文档和 agent 消息并回传；`plannotator-last` 可批注最后一条回复，历史本地保存；支持多个 harness | 高度重合，必须作为直接对照；不能将其概括为仅计划评审 |
 | [Herdr Annotate](https://github.com/plannotator/herdr-annotate) | 在 Herdr 中批注终端文本、文档和 agent 回复，反馈作为下一条消息发送，支持 Codex/Claude Code 等 | 同样高度重合；依赖 Herdr 这一宿主，其选区机制不等于 Codex/CC 自身的原生扩展 |
 | [VSCode Agent Annotator](https://github.com/etsd-tech/vscode-agent-annotator) | VS Code 原生代码评论批量格式化，经 Claude Code Channels 发回会话 | 很接近“便利化批注”的思路，但主要目标是文件/代码行，且需要检查 Channels 的消息身份及环境限制 |
 
-Plannotator 的当前 README 还描述了在较新 Claude Code 上通过 Mod 异步送回消息的路径，因此不能把“回传原生会话”当作 TurnMargin 独有能力。
+Plannotator 的当前 README 还描述了在较新 Claude Code 上通过 Mod 异步送回消息的路径，因此不能把“回传原生会话”当作 TurnAnnotation 独有能力。
 
 ## 本项目选择的研究重点
 
