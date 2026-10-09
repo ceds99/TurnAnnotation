@@ -12,4 +12,3 @@ Read README.md, docs/decisions.md and the relevant design document before implem
 - No quality or token-saving claims without reproducible measurements and uncertainty estimates.
 - Do not publish local conversations or raw run logs. local/ and evals/runs/ are ignored intentionally.
 - Implement only the requested scope. Current repository contains specifications and examples, not a working plugin or evaluation runner.
-

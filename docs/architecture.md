@@ -73,4 +73,3 @@
 ## 模块边界建议
 
 未来代码可分为 `core`（组装及数据契约）、`history`（本地存储）、`adapters/claude-code`、`adapters/codex`、`evals`。当前不创建空壳实现，也不声称宿主兼容已经验证。
-

@@ -118,4 +118,3 @@ token 采用预先定义的比率，如相同任务集合的算术平均总 toke
 每条记录包括 case_id、task_family、arm、replicate_id、fixture/hash、组装器版本、宿主/模型配置、实际 user message、trajectory、产物校验、逐请求评分及证据、原始 usage、用量来源、延迟、错误类型。
 
 真实运行存入忽略目录 `evals/runs/`，公开报告使用人工构造案例或经过检查的数据。当前 [示例案例](../evals/cases/structured-output.json) 仅示范任务与评分意图，不是跑过的 benchmark。
-
