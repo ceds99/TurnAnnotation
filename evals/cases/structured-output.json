@@ -1,0 +1,39 @@
+{
+  "schema_version": "design-example-0",
+  "id": "config-and-unrelated-question-001",
+  "status": "unexecuted-design-example",
+  "task_family": "structured-output",
+  "history": [
+    {
+      "role": "user",
+      "content": "接下来每轮都只输出一个 JSON 对象，包含 config 和 answers。config 只能有 storage、auth、export；answers 是字符串对象。为一个个人笔记工具提出初始配置，导出格式用 JSON。"
+    },
+    {
+      "role": "assistant",
+      "content": "{\"config\":{\"storage\":\"cloud\",\"auth\":true,\"export\":[\"json\"]},\"answers\":{}}"
+    }
+  ],
+  "annotations": [
+    {"quote": "\"storage\":\"cloud\"", "comment": "改为 local。"},
+    {"quote": "\"auth\":true", "comment": "改为 false。"}
+  ],
+  "freeform": "另外计算 17×19，将整数结果转成字符串，放在 answers.product。保持其他配置不变。",
+  "arm_A": "storage 改为 local；auth 改为 false。\n另外计算 17×19，将整数结果转成字符串，放在 answers.product。保持其他配置不变。",
+  "arm_B": "针对上条 JSON：\n- 原文 `\"storage\":\"cloud\"`：改为 local。\n- 原文 `\"auth\":true`：改为 false。\n\n另外计算 17×19，将整数结果转成字符串，放在 answers.product。保持其他配置不变。",
+  "arm_C": {"generate_from": "annotations + freeform", "compiler_version": null},
+  "requests": [
+    {"id": "r1", "intent": "本地存储", "check": {"json_path": "config.storage", "equals": "local"}},
+    {"id": "r2", "intent": "关闭账号认证", "check": {"json_path": "config.auth", "equals": false}},
+    {"id": "r3", "intent": "准确回答额外算术问题", "check": {"json_path": "answers.product", "equals": "323"}}
+  ],
+  "preserve": [
+    {"json_path": "config.export", "equals": ["json"]}
+  ],
+  "format_checks": [
+    "output is exactly one JSON object with no markdown fences",
+    "top-level keys are exactly config and answers",
+    "config keys are exactly storage, auth and export",
+    "answers values are strings"
+  ],
+  "note": "评分意图示例，尚无 runner。正式数据集需包含代码/文档、多请求和歧义定位等独立案例；不能凭这个简单案例推断通用效果。"
+}

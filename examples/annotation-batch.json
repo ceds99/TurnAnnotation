@@ -1,0 +1,21 @@
+{
+  "schema_version": "proposal-0",
+  "source_message": {
+    "local_ref": "demo-message-1",
+    "text": "首版需要账号系统。默认将记录保存到云端。"
+  },
+  "annotations": [
+    {
+      "local_id": "a1",
+      "quote": "首版需要账号系统。",
+      "comment": "首版只在本地使用，去掉账号系统。"
+    },
+    {
+      "local_id": "a2",
+      "quote": "默认将记录保存到云端。",
+      "comment": "改为本地保存，并支持导出。"
+    }
+  ],
+  "freeform": "请估算首版的开发工作量。"
+}
+
